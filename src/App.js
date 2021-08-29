@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import DetailsTable from './components/DetailsTable';
 
 function App() {
   return (
@@ -11,11 +12,12 @@ function App() {
 </nav>
     <div className="container-fluid ">
  
-    <div className="row">
+    <div className="row mt-2">
   
       <div className="col-7">
-  
-        <h1>hello world</h1>
+  <div className="m-3 pt-3">
+        <DetailsTable/>
+        </div>
   
       </div>
   
