@@ -3,8 +3,14 @@ import './App.css';
 
 function App() {
   return (
+    <>
+    <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Student Management System</span>
+  </div>
+</nav>
     <div className="container-fluid ">
-
+ 
     <div className="row">
   
       <div className="col-7">
@@ -23,7 +29,7 @@ function App() {
     </div>
   
   </div>
-  
+  </>
   
   );
 }
