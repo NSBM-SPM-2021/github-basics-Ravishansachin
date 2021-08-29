@@ -2,9 +2,9 @@
 
 
 
-const DetailsTable = ({}) => {
+const DetailsTable = ({students}) => {
 
-
+console.log(students)
 
     return ( 
 
@@ -13,30 +13,23 @@ const DetailsTable = ({}) => {
 <table className="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">Email</th>
+      <th scope="col">COURSE</th>
     </tr>
   </thead>
+  
   <tbody>
+  {students.map((student) => (
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{student.id}</th>
+      <td>{student.name}</td>
+      <td>{student.email}</td>
+      <td>{student.course}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+))}
+    
   </tbody>
 </table>
         </>
