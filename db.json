@@ -11,6 +11,12 @@
       "name": "Ravishan",
       "email": "ravishan@test.com",
       "course": "MIS"
+    },
+    {
+      "name": "rac",
+      "email": "test@gmail.com",
+      "course": "Mis",
+      "id": 3
     }
   ]
 }

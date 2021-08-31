@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import DetailsTable from './components/DetailsTable';
 import { useState, useEffect } from 'react';
+import Form from './components/Form';
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -26,6 +27,18 @@ function App() {
     return data; 
   }
 
+  const addStudents = async (student) => {
+    const res = await fetch("http://localhost:5000/students", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(student)
+    })
+    const data = await res.json()
+  setStudents([...students, data]);
+  }
+
   return (
     <>
       <nav class="navbar navbar-dark bg-dark">
@@ -46,8 +59,7 @@ function App() {
 
           <div className="col-5">
 
-            <h1>hello world</h1>
-
+         <Form onAdd={addStudents} />
 
           </div>
 
