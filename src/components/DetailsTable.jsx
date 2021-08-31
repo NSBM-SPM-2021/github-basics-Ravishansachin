@@ -11,7 +11,7 @@ console.log(students)
         <>
 
 <table className="table">
-  <thead>
+  <thead className="thead-light">
     <tr>
       <th scope="col">ID</th>
       <th scope="col">NAME</th>

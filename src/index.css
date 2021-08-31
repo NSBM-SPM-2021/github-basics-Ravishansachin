@@ -1,0 +1,41 @@
+body  {
+    background-color: #e7e7e7 !important;
+}
+
+.DetailsTable{
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+    border-bottom: 2px solid #30b0bb;
+}
+
+.table .thead-light th {
+    color : #fff !important;
+    background: #30b0bb !important;
+    border: none !important;
+}
+.btn{
+   background-color: #30b0bb !important;
+   border-color:#30b0bb !important;
+}
+
+.nav-light {
+
+    background-color: #30b0bb !important;
+    -webkit-box-shadow: 5px 9px 43px 1px rgba(0,0,0,0.18); 
+	box-shadow: 5px 9px 43px 1px rgba(0,0,0,0.18);
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+.bg-light > a {
+    color: #fff !important;
+}
+.navbar-nav > a {
+    color: #fff !important;
+}
+
+.brand{
+    color: #e7e7e7 !important;
+    padding-left: 30px;
+}

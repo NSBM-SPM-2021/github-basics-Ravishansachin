@@ -41,17 +41,25 @@ function App() {
 
   return (
     <>
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">Student Management System</span>
+      <nav class="navbar navbar-expand-lg navbar-light nav-light fixed">
+    <a class="navbar-brand brand">Students Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+
         </div>
-      </nav>
+    </div>
+</nav>
       <div className="container-fluid ">
 
         <div className="row mt-2">
 
           <div className="col-7">
-            <div className="m-3 pt-3">
+          <img src="https://cdn.pixabay.com/photo/2015/05/19/14/55/educational-773651_960_720.jpg" class="card-img-top" alt="..."/>
+            <div className="m-3 pt-3 DetailsTable">
+          
               <DetailsTable students={students} />
             </div>
 
