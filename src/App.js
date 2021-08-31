@@ -66,7 +66,7 @@ function App() {
           </div>
 
           <div className="col-5">
-
+          <img src="/sclgirl.png" class="card-img-top" alt="..."/>
          <Form onAdd={addStudents} />
 
           </div>
