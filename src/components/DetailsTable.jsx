@@ -15,7 +15,7 @@ console.log(students)
     <tr>
       <th scope="col">ID</th>
       <th scope="col">NAME</th>
-      <th scope="col">Email</th>
+      <th scope="col">EMAIL</th>
       <th scope="col">COURSE</th>
     </tr>
   </thead>

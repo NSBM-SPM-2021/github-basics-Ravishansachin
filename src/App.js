@@ -1,48 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
 import DetailsTable from './components/DetailsTable';
 import { useState, useEffect } from 'react';
 import Form from './components/Form';
+import firebaseRef from './firebase';
 
 function App() {
   const [students, setStudents] = useState([]);
 
+  const ref = firebaseRef.firestore().collection("students");
+
+  function getStudents() {
+    ref.onSnapshot((querySnapshot) => {
+      const items =[];
+      querySnapshot.forEach((doc) => {
+       // console.log(doc);
+        console.log(typeof doc.data);
+        items.push({...doc.data()});
+      });
+      setStudents(items);
+    })
+
+  }
   useEffect(() => {
-
-    const getStudents = async () => {
-
-      const studentsFromServer = await fetchStudents();
-     // console.log(studentsFromServer);
-      setStudents(studentsFromServer);
-
-    }
-
     getStudents();
 
-  }, [])
+  })
+  const addStudents = (student) => {
 
-  const fetchStudents = async () => {
-    const res = await fetch("http://localhost:5000/students");
-    const data = await res.json();  
-    return data; 
+    const userRef = firebaseRef.firestore().collection("students").add({
+      id: student.id,
+      name: student.name,
+      email: student.email,
+      course: student.course
+    }); 
+    setStudents([...students, userRef]);
   }
-
-  const addStudents = async (student) => {
-    const res = await fetch("http://localhost:5000/students", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json"
-      },
-      body: JSON.stringify(student)
-    })
-    const data = await res.json()
-  setStudents([...students, data]);
-  }
-
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-light nav-light fixed">
-    <a class="navbar-brand brand">Students Management</a>
+    <a href="!#" class="navbar-brand brand">Students Management System</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
