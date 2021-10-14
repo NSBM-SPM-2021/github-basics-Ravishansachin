@@ -15,3 +15,7 @@ Simple Student Management System built with ReactJs with Firebase
 
 * ReactJs
 * Firebase
+
+## Testing
+
+React Testing Library
