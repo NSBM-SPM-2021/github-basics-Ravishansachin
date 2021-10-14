@@ -1,6 +1,9 @@
 # Student Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple Student Management System built with ReactJs with Firebase
+
+![screencapture-student-management-syste-7ecb8-firebaseapp-2021-10-15-00_22_59](https://user-images.githubusercontent.com/54973880/137396972-8475ead9-4b0b-4ef0-b60a-fd228a25aa5f.png)
+
 
 
 ## Available Scripts
