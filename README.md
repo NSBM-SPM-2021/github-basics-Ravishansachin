@@ -1,4 +1,4 @@
-# Student Management System
+#  👋 Student Management System
 
 Simple Student Management System built with ReactJs with Firebase
 
