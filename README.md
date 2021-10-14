@@ -19,3 +19,11 @@ Simple Student Management System built with ReactJs with Firebase
 ## Testing
 
 React Testing Library
+
+
+## Trello Board
+
+
+
+
+![SS1](https://user-images.githubusercontent.com/54973880/137398002-a0ace118-2209-4747-9c45-dd62c00bb32a.png)
